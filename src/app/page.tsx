@@ -20,7 +20,7 @@ export default function AuthGate() {
     setMessage("");
 
     // Ping the exact same Auth database your iOS app uses
-    const { data, error } = await supabase.auth.signInWithPassword({
+    const { error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
